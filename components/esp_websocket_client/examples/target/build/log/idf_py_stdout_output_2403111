@@ -1,0 +1,14 @@
+[1/8] Performing build step for 'bootloader'
+[1/1] cd /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/bootloader/esp-idf/esptool_py && /home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/martin/espm/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/bootloader/bootloader.bin
+Bootloader binary size 0x68d0 bytes. 0x730 bytes (6%) free.
+[2/6] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj
+[3/6] Linking CXX static library esp-idf/mbedtls/mbedtls/library/libmbedx509.a
+[4/6] Linking CXX executable websocket_example.elf
+[5/6] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/websocket_example.bin
+[6/6] cd /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/esp-idf/esptool_py && /home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/martin/espm/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/partition_table/partition-table.bin /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/websocket_example.bin
+websocket_example.bin binary size 0xd94d0 bytes. Smallest app partition is 0x100000 bytes. 0x26b30 bytes (15%) free.

@@ -1,0 +1,25 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/bootloader/esp-idf/esptool_py && /home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/martin/espm/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/bootloader/bootloader.bin
+Bootloader binary size 0x68d0 bytes. 0x730 bytes (6%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/websocket_example.c.obj
+[3/8] Linking C static library esp-idf/main/libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable websocket_example.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/websocket_example.bin
+[7/8] cd /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/esp-idf/esptool_py && /home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/martin/espm/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/partition_table/partition-table.bin /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/websocket_example.bin
+websocket_example.bin binary size 0xd8e30 bytes. Smallest app partition is 0x100000 bytes. 0x271d0 bytes (15%) free.
+[7/8] cd /home/martin/espm/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/martin/espm/esp-idf -D "SERIAL_TOOL=/home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python;;/home/martin/espm/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build -P /home/martin/espm/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB1 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 websocket_example.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB1
+Connecting....
+
+A fatal error occurred: This chip is ESP32-S3 not ESP32. Wrong --chip argument?
+FAILED: CMakeFiles/flash 
+cd /home/martin/espm/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/martin/espm/esp-idf -D "SERIAL_TOOL=/home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python;;/home/martin/espm/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build -P /home/martin/espm/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

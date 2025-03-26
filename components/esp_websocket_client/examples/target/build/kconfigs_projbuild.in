@@ -1,0 +1,7 @@
+source "/home/martin/espm/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/home/martin/espm/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "/home/martin/espm/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/home/martin/espm/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/home/martin/espm/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/main/Kconfig.projbuild"
+source "/home/martin/espm/esp-idf/examples/common_components/protocol_examples_common/Kconfig.projbuild"

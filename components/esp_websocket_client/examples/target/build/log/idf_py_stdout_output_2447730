@@ -1,0 +1,84 @@
+[1/11] Generating ../../ca_certificate_public_domain.pem.S
+[2/11] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/ca_certificate_public_domain.pem.S.obj
+[3/11] Linking C static library esp-idf/main/libmain.a
+[4/11] Performing build step for 'bootloader'
+[1/1] cd /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/bootloader/esp-idf/esptool_py && /home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/martin/espm/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/bootloader/bootloader.bin
+Bootloader binary size 0x68d0 bytes. 0x730 bytes (6%) free.
+[5/9] Generating ld/sections.ld
+[6/9] Linking CXX executable websocket_example.elf
+[7/9] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/websocket_example.bin
+[8/9] cd /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/esp-idf/esptool_py && /home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/martin/espm/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/partition_table/partition-table.bin /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/websocket_example.bin
+websocket_example.bin binary size 0xd96a0 bytes. Smallest app partition is 0x100000 bytes. 0x26960 bytes (15%) free.
+[8/9] cd /home/martin/espm/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/martin/espm/esp-idf -D "SERIAL_TOOL=/home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python;;/home/martin/espm/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build -P /home/martin/espm/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 websocket_example.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 44:17:93:e6:3b:bc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000e9fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26832 bytes to 16845...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768d... (100 %)
+Wrote 26832 bytes (16845 compressed) at 0x00001000 in 0.7 seconds (effective 298.1 kbit/s)...
+Hash of data verified.
+Compressed 890528 bytes to 573381...
+Writing at 0x00010000... (2 %)
+Writing at 0x00019e8c... (5 %)
+Writing at 0x000237bf... (8 %)
+Writing at 0x00028d10... (11 %)
+Writing at 0x000323b3... (14 %)
+Writing at 0x0003d17a... (17 %)
+Writing at 0x00042cfb... (20 %)
+Writing at 0x000485da... (22 %)
+Writing at 0x0004de81... (25 %)
+Writing at 0x00053884... (28 %)
+Writing at 0x00059305... (31 %)
+Writing at 0x0005ee30... (34 %)
+Writing at 0x00064ddb... (37 %)
+Writing at 0x0006a858... (40 %)
+Writing at 0x00070146... (42 %)
+Writing at 0x0007543e... (45 %)
+Writing at 0x0007a7a7... (48 %)
+Writing at 0x0007fd12... (51 %)
+Writing at 0x000850ad... (54 %)
+Writing at 0x0008a742... (57 %)
+Writing at 0x0008fffb... (60 %)
+Writing at 0x00095f7e... (62 %)
+Writing at 0x0009b5db... (65 %)
+Writing at 0x000a0b44... (68 %)
+Writing at 0x000a635a... (71 %)
+Writing at 0x000abd6f... (74 %)
+Writing at 0x000b1466... (77 %)
+Writing at 0x000b6def... (80 %)
+Writing at 0x000bc80f... (82 %)
+Writing at 0x000c1fa2... (85 %)
+Writing at 0x000ca8a5... (88 %)
+Writing at 0x000d2e85... (91 %)
+Writing at 0x000d8db2... (94 %)
+Writing at 0x000de7d8... (97 %)
+Writing at 0x000e3f7b... (100 %)
+Wrote 890528 bytes (573381 compressed) at 0x00010000 in 13.1 seconds (effective 544.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 553.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

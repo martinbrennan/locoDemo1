@@ -1,0 +1,126 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+Using component placed at /home/martin/espm/spot/managed_components/espressif__esp_websocket_client for dependency "espressif/esp_websocket_client", specified in /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/main/idf_component.yml
+Using component placed at /home/martin/espm/esp-idf/examples/common_components/protocol_examples_common for dependency "protocol_examples_common", specified in /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/main/idf_component.yml
+Processing 3 dependencies:
+[1/3] espressif/esp_websocket_client (1.2.3) (/home/martin/espm/spot/managed_components/espressif__esp_websocket_client)
+[2/3] protocol_examples_common (*) (/home/martin/espm/esp-idf/examples/common_components/protocol_examples_common)
+[3/3] idf (5.2.0)
+-- Project sdkconfig file /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/sdkconfig
+-- Compiler supported targets: xtensa-esp32-elf
+-- App "websocket_example" version: dca59c2-dirty
+-- Adding linker script /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__esp_websocket_client esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocol_examples_common protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/martin/espm/esp-idf/components/app_trace /home/martin/espm/esp-idf/components/app_update /home/martin/espm/esp-idf/components/bootloader /home/martin/espm/esp-idf/components/bootloader_support /home/martin/espm/esp-idf/components/bt /home/martin/espm/esp-idf/components/cmock /home/martin/espm/esp-idf/components/console /home/martin/espm/esp-idf/components/cxx /home/martin/espm/esp-idf/components/driver /home/martin/espm/esp-idf/components/efuse /home/martin/espm/esp-idf/components/esp-tls /home/martin/espm/esp-idf/components/esp_adc /home/martin/espm/esp-idf/components/esp_app_format /home/martin/espm/esp-idf/components/esp_bootloader_format /home/martin/espm/esp-idf/components/esp_coex /home/martin/espm/esp-idf/components/esp_common /home/martin/espm/esp-idf/components/esp_eth /home/martin/espm/esp-idf/components/esp_event /home/martin/espm/esp-idf/components/esp_gdbstub /home/martin/espm/esp-idf/components/esp_hid /home/martin/espm/esp-idf/components/esp_http_client /home/martin/espm/esp-idf/components/esp_http_server /home/martin/espm/esp-idf/components/esp_https_ota /home/martin/espm/esp-idf/components/esp_https_server /home/martin/espm/esp-idf/components/esp_hw_support /home/martin/espm/esp-idf/components/esp_lcd /home/martin/espm/esp-idf/components/esp_local_ctrl /home/martin/espm/esp-idf/components/esp_mm /home/martin/espm/esp-idf/components/esp_netif /home/martin/espm/esp-idf/components/esp_netif_stack /home/martin/espm/esp-idf/components/esp_partition /home/martin/espm/esp-idf/components/esp_phy /home/martin/espm/esp-idf/components/esp_pm /home/martin/espm/esp-idf/components/esp_psram /home/martin/espm/esp-idf/components/esp_ringbuf /home/martin/espm/esp-idf/components/esp_rom /home/martin/espm/esp-idf/components/esp_system /home/martin/espm/esp-idf/components/esp_timer /home/martin/espm/esp-idf/components/esp_wifi /home/martin/espm/esp-idf/components/espcoredump /home/martin/espm/spot/managed_components/espressif__esp_websocket_client /home/martin/espm/esp-idf/components/esptool_py /home/martin/espm/esp-idf/components/fatfs /home/martin/espm/esp-idf/components/freertos /home/martin/espm/esp-idf/components/hal /home/martin/espm/esp-idf/components/heap /home/martin/espm/esp-idf/components/http_parser /home/martin/espm/esp-idf/components/idf_test /home/martin/espm/esp-idf/components/ieee802154 /home/martin/espm/esp-idf/components/json /home/martin/espm/esp-idf/components/log /home/martin/espm/esp-idf/components/lwip /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/main /home/martin/espm/esp-idf/components/mbedtls /home/martin/espm/esp-idf/components/mqtt /home/martin/espm/esp-idf/components/newlib /home/martin/espm/esp-idf/components/nvs_flash /home/martin/espm/esp-idf/components/nvs_sec_provider /home/martin/espm/esp-idf/components/openthread /home/martin/espm/esp-idf/components/partition_table /home/martin/espm/esp-idf/components/perfmon /home/martin/espm/esp-idf/components/protobuf-c /home/martin/espm/esp-idf/examples/common_components/protocol_examples_common /home/martin/espm/esp-idf/components/protocomm /home/martin/espm/esp-idf/components/pthread /home/martin/espm/esp-idf/components/sdmmc /home/martin/espm/esp-idf/components/soc /home/martin/espm/esp-idf/components/spi_flash /home/martin/espm/esp-idf/components/spiffs /home/martin/espm/esp-idf/components/tcp_transport /home/martin/espm/esp-idf/components/ulp /home/martin/espm/esp-idf/components/unity /home/martin/espm/esp-idf/components/usb /home/martin/espm/esp-idf/components/vfs /home/martin/espm/esp-idf/components/wear_levelling /home/martin/espm/esp-idf/components/wifi_provisioning /home/martin/espm/esp-idf/components/wpa_supplicant /home/martin/espm/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build
+[1/11] Generating ../../ca_certificate_public_domain.pem.S
+[2/11] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/ca_certificate_public_domain.pem.S.obj
+[3/11] Linking C static library esp-idf/main/libmain.a
+[4/11] Performing build step for 'bootloader'
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/sdkconfig
+-- Compiler supported targets: xtensa-esp32-elf
+-- Adding linker script /home/martin/espm/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Bootloader project name: "bootloader" version: 1
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.ld
+-- Adding linker script /home/martin/espm/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_bootloader_format esp_common esp_hw_support esp_rom esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: /home/martin/espm/esp-idf/components/bootloader /home/martin/espm/esp-idf/components/bootloader_support /home/martin/espm/esp-idf/components/efuse /home/martin/espm/esp-idf/components/esp_app_format /home/martin/espm/esp-idf/components/esp_bootloader_format /home/martin/espm/esp-idf/components/esp_common /home/martin/espm/esp-idf/components/esp_hw_support /home/martin/espm/esp-idf/components/esp_rom /home/martin/espm/esp-idf/components/esp_system /home/martin/espm/esp-idf/components/esptool_py /home/martin/espm/esp-idf/components/freertos /home/martin/espm/esp-idf/components/hal /home/martin/espm/esp-idf/components/log /home/martin/espm/esp-idf/components/bootloader/subproject/main /home/martin/espm/esp-idf/components/bootloader/subproject/components/micro-ecc /home/martin/espm/esp-idf/components/newlib /home/martin/espm/esp-idf/components/partition_table /home/martin/espm/esp-idf/components/soc /home/martin/espm/esp-idf/components/spi_flash /home/martin/espm/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/bootloader
+[1/1] cd /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/bootloader/esp-idf/esptool_py && /home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/martin/espm/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/bootloader/bootloader.bin
+Bootloader binary size 0x68d0 bytes. 0x730 bytes (6%) free.
+[5/9] Generating ld/sections.ld
+[6/9] Linking CXX executable websocket_example.elf
+[7/9] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/websocket_example.bin
+[8/9] cd /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/esp-idf/esptool_py && /home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/martin/espm/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/partition_table/partition-table.bin /home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build/websocket_example.bin
+websocket_example.bin binary size 0xd8df0 bytes. Smallest app partition is 0x100000 bytes. 0x27210 bytes (15%) free.
+[8/9] cd /home/martin/espm/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/martin/espm/esp-idf -D "SERIAL_TOOL=/home/martin/.espressif/python_env/idf5.2_py3.8_env/bin/python;;/home/martin/espm/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/martin/espm/spot/managed_components/espressif__esp_websocket_client/examples/target/build -P /home/martin/espm/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 websocket_example.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 44:17:93:e6:3b:bc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000e8fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26832 bytes to 16845...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768d... (100 %)
+Wrote 26832 bytes (16845 compressed) at 0x00001000 in 0.7 seconds (effective 300.1 kbit/s)...
+Hash of data verified.
+Compressed 888304 bytes to 571704...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001a5ec... (5 %)
+Writing at 0x00023627... (8 %)
+Writing at 0x00028db7... (11 %)
+Writing at 0x00032a8c... (14 %)
+Writing at 0x0003d075... (17 %)
+Writing at 0x00042d09... (20 %)
+Writing at 0x000485dc... (22 %)
+Writing at 0x0004dea2... (25 %)
+Writing at 0x000538a2... (28 %)
+Writing at 0x0005933e... (31 %)
+Writing at 0x0005ee63... (34 %)
+Writing at 0x00064e22... (37 %)
+Writing at 0x0006a8a3... (40 %)
+Writing at 0x00070177... (42 %)
+Writing at 0x00075487... (45 %)
+Writing at 0x0007a818... (48 %)
+Writing at 0x0007fd5f... (51 %)
+Writing at 0x0008510f... (54 %)
+Writing at 0x0008a7ab... (57 %)
+Writing at 0x00090092... (60 %)
+Writing at 0x0009600d... (62 %)
+Writing at 0x0009b679... (65 %)
+Writing at 0x000a0be1... (68 %)
+Writing at 0x000a6425... (71 %)
+Writing at 0x000abe03... (74 %)
+Writing at 0x000b14ee... (77 %)
+Writing at 0x000b6e3c... (80 %)
+Writing at 0x000bc8b1... (82 %)
+Writing at 0x000c1fed... (85 %)
+Writing at 0x000ca91d... (88 %)
+Writing at 0x000d2f1b... (91 %)
+Writing at 0x000d8dcc... (94 %)
+Writing at 0x000de8c4... (97 %)
+Writing at 0x000e3f41... (100 %)
+Wrote 888304 bytes (571704 compressed) at 0x00010000 in 13.0 seconds (effective 545.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 515.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
