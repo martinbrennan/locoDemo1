@@ -1,115 +1,62 @@
-ESP Based Sonos Controller
+This is a fully featured example program to show off the capabilities of the Loco Software Library
+It runs on the Loco V4 PCB with an attached Loco Display V1
 
+Find out more at www.brennan.co.uk/loco
 
-. ~/espm/esp-idf/export.sh
+The program is built using Espressifs ESP-IDF framework.
 
-idf.py set-target esp32s2
+Instructions to install ESP-IDF and build the program can be found here
 
-idf.py menuconfig
+https://brennan.co.uk/pages/esp-idf-installation-and-build
 
-idf.py build
+The program presents a fairly self explanatory menu based UI on the TFT.
 
-idf.py -p /dev/ttyUSB1 flash
+Push and turn the rotary to use the menu
+The push button switches have the following uses
 
-idf.py monitor	# <ctrl>+] to exit
+SW4 - Back
+SW3 - Next
+SW2 - Play/Stop
+SW5 - unused
 
-in ~/esp32/esp-idf ./install.sh esp32s3		# then export (above)
+The first step is to Setup Wifi - you can find this in the main menu.
+Loco will store the chosen Wifi network and password (in spiffs) and will automatically connect on restart
+The TFT will display the connection status and IP address at the top left and the time at the top right.
+If you type the IP address into a web browser you will see the Loco Web UI
 
+You can change the code for the UI and Web UI to customise things.
+The UI is mainly defined in ui.c - it wil help to have some familiarity with LVGL to understand and build on this.
+The web UI is defined in locoPage.cpp and the backend is implemented by web.c
 
-To set up the build environment I did this (for 5.1 - I subsequently switched to master (latest))
+You can use the web UI to search for, browse and play internet radio stations provided by Airable.
+You can assign stations to Favourites from the web UI and these can be played from the menu.
 
+You can play Spotify through Loco using its Spotify Connect capability.
+Spotify Connect is available to the 260 million Spotify subscribers. It is not available on the free tier.
+When Loco is connected to the Wifi network you can see it if you tap the devices icon on the Spotify app.
+Loco has the name "Beauty" - like the quark - you can change this in main.c
 
-Follow instructions here
-https://docs.espressif.com/projects/esp-idf/en/v5.1/esp32/get-started/linux-macos-setup.html 
+When you play music through Loco it displays the album art and metadata (track, artist and album) as well as duration and other details
 
+When you select Loco your Spotify app will send your user name and credentials to Loco.
+This allows Loco to play music without the app in future.
 
-in espm/esp-idf
-./install.sh esp32s3
+As an example.
 
+If you navigate to My Playlists you will see all your Spotify Playlists. Loco will play the selected playlist when you hit play.
+Next, Back and Play/Stop operate as you would expect while playing.
+Turning the rotary when not in in a menu will adjust the volume
 
-Then in each terminal where I want to use esp-idf
-. ~/espm/esp-idf/export.sh
+The Playlists function is coded outside the Loco Library and uses the Spotify API. You will find the code for this in api.c
 
-
-Then in espm
-git clone https://github.com/martinbrennan/spot.git
-
-
-Then in espm/sot...
-idf.py set target esp32s3
-
-
-idf.py menuconfig
-idf.py build
-
-idf.py -p /dev/ttyUSB1 flash monitor
-
-
-I needed to use this to get mdns
-
-idf.py add-dependency espressif/mdns
-
-/********************************************************
- 3rd September fresh environment build 
-*********************************************************/
-
-mkdir espl
-cd espl
-git clone --recursive https://github.com/espressif/esp-idf.git
-
-in espl/esp-idf
-./install.sh esp32s3
-
-Then in each terminal where I want to use esp-idf
-. ~/espl/esp-idf/export.sh
-
-Then in espl
--
-
-in espl
-git clone --recursive https://github.com/espressif/esp-adf.git
-
-cd esp-adf
-
-./install.sh
-. ./export.sh
-
-idf.py set-target esp32s3
-idf.py menuconfig.
-idf.py build
-
-Error in miniz_zip.c caused by GCC-13
-idf-py menuconfig
-	/ GCC13 ... disable warnings
-
-idf.py -p /dev/ttyUSB1 flash monitor
-
-E (15313) AUDIO_THREAD: Not found right xTaskCreateRestrictedPinnedToCore.
-
-Need to patch these files
-
-espl/esp-idf/components/freertos/esp_additions/freertos_tasks_c_additions.h
-espl/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h
-
-
-[This worked but they have upgraded instructions if necessary in future]
-
-Please enter IDF-PATH with "cd $IDF_PATH" and apply the IDF patch with "git apply $ADF_PATH/idf_patches/idf_v5.4_freertos.patch" first
+You can add your own functions using this as a template.
 
 
 
-/********************************************************
- 13th September fresh terminal
-*********************************************************/
 
-cd espm
-./esp-idf/install.sh esp32s3
-. ./esp-idf/export.sh
-./esp-adf/install.sh
-. ./esp-adf/export.sh
-export ADF_PATH="/home/martin/espm/esp-adf"
-cd spot
-idf.py -p /dev/ttyUSB1 flash monitor
+
+
+
 
 
 
