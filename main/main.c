@@ -243,6 +243,7 @@ void setup() {
   setVolume(vi);
 
   memDebugB();
+ initLoco((PFVN)locoCallback, "Beauty");
 
   initialiseWifi();
 
@@ -250,7 +251,7 @@ void setup() {
 
   memDebugB();
 
-  initLoco((PFVN)locoCallback, "Beauty");
+ 
 
   printf("initButtons()\n");
   initButtons();
